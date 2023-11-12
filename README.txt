@@ -9,7 +9,10 @@ must specify filename, output will be 'output.csv'. extracts all eggs into outpu
 
 TODO:
 
--create current_eggs.csv from extracted eggs. 
--iterate through current_eggs.csv and check with graphql API if hatched or not.
-    - if hatched, insert into all_axies
+change extract_eggs.py's output to 'old_eggs.py'. these are old eggs because they have been eggs for much longer than 5 days, and most likely forgotten by owner. unimportant, but can scan this periodically to check if hatched.
 
+
+
+scripts to maintain current_eggs.csv
+    1. write to current_eggs.csv when a new egg is created (highest id)
+    2. remove from current_eggs.csv when egg has been hatched. insert into all_axies
